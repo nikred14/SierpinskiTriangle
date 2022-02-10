@@ -2,6 +2,7 @@ int moor = 8;
 public void setup() {
   size (400, 400);
   background (0);
+  noStroke();
 }
 public void draw() {
   fill(0);
@@ -27,7 +28,6 @@ public void sierpinski(int x, int y, int len)
 {
   if (len<=moor) {
     fill(255);
-    stroke(0);
     triangle(x, y, x+len/2, y+len, x+len, y);
   } else {
     sierpinski(x, y, len/2);
